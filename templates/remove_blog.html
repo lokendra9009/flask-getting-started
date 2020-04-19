@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Remove Blog{% endblock %}
+{% block content %}
+<h1>Removing Blog</h1>
+<span>Title : </span><br>{{blog.Title}}<br>
+<span>Content : </span><br>{{blog.Content}}<br>
+<h2>Are you sure? </h2>
+<form method="POST">
+    <button type="submit">Yes</button>
+    <a href="{{url_for('welcome')}}">No</a>
+</form>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+<h1>
+    Welcome to the HTML template
+    Today's date is {{date}}
+</h1>
+<p>This is a simple welcome page !!!</p>
+
+<ul>
+    {% for blog in blogs %}
+    <li>
+        <a href="{{url_for('blog',index=loop.index0)}}">
+            {{blog.Title}}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
